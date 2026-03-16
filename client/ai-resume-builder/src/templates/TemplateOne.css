@@ -1,0 +1,20 @@
+.template-one {
+  padding: 25px;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #000;
+}
+
+.template-one h1 {
+  color: #2563eb;
+  margin-bottom: 5px;
+}
+
+.template-one h3 {
+  margin-top: 15px;
+  color: #333;
+}
+
+.template-one p {
+  font-size: 14px;
+}

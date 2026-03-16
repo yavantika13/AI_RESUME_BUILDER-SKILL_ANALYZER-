@@ -1,0 +1,48 @@
+/* .template {
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  min-height: 400px;
+  border-radius: 10px;
+}
+
+.template-one h1 {
+  color: #2563eb;
+}
+
+.template-two h2 {
+  color: #16a34a;
+} */
+
+
+.template {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: #111;
+}
+
+/* TEMPLATE 1 */
+.template-one h1 {
+  font-size: 26px;
+}
+
+.template-one ul {
+  padding-left: 20px;
+}
+
+/* TEMPLATE 2 */
+.template-two .header {
+  background: #2563eb;
+  color: white;
+  padding: 15px;
+}
+
+.skill-tags span {
+  background: #dbeafe;
+  color: #1e3a8a;
+  padding: 5px 10px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 20px;
+}

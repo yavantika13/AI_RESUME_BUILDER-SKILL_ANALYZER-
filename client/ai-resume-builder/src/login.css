@@ -1,0 +1,104 @@
+/* Full page center container */
+.login-container {
+  background: #f3f4f6;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.login-card {
+  background: white;
+  width: 380px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Title */
+.login-title {
+  text-align: center;
+  color: #2563eb;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Message */
+.login-message {
+  text-align: center;
+  color: #dc2626;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Labels */
+.login-card label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.login-card input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.4);
+}
+
+/* Button */
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-card button:hover {
+  background: #1e40af;
+}
+
+.login-card button:disabled {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+/* Bottom Link */
+.login-bottom-text {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.login-bottom-text a {
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-bottom-text a:hover {
+  text-decoration: underline;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

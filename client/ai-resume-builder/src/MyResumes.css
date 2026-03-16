@@ -1,0 +1,279 @@
+/* .my-resumes {
+  padding: 30px;
+  background: #f4f8ff;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  color: #1e40af;
+}
+
+.header button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.resume-list {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.resume-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.resume-card h3 {
+  color: #1e3a8a;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.actions button {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.view {
+  background: #3b82f6;
+  color: white;
+}
+
+.download {
+  background: #10b981;
+  color: white;
+}
+
+.edit {
+  background: #f59e0b;
+  color: white;
+}
+
+.empty {
+  color: gray;
+  text-align: center;
+} */
+
+/* 
+.myresumes {
+  padding: 30px;
+}
+
+.myresumes h2 {
+  color: #1e40af;
+  margin-bottom: 20px;
+}
+
+.empty {
+  color: #555;
+}
+
+.resume-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.resume-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.resume-card h3 {
+  color: #2563eb;
+  margin-bottom: 5px;
+}
+
+.resume-card p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-edit {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #1e40af;
+}
+
+.btn-download {
+  background: #e5e7eb;
+}
+
+.btn-download:hover {
+  background: #d1d5db;
+} */
+
+
+/* =========================
+   My Resumes Page
+========================= */
+
+.my-resumes {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.my-resumes h2 {
+  font-size: 26px;
+  color: #1e40af;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Resume List Grid
+========================= */
+
+.resume-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   Resume Card
+========================= */
+
+.resume-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.resume-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.resume-card h3 {
+  font-size: 18px;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.resume-card p {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.resume-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.resume-actions button {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* View Button */
+.btn-view {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn-view:hover {
+  background: #1e40af;
+}
+
+/* Download Button */
+.btn-download {
+  background: #10b981;
+  color: #fff;
+}
+
+.btn-download:hover {
+  background: #059669;
+}
+
+/* Delete Button */
+.btn-delete {
+  background: #ef4444;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+}
+
+/* =========================
+   Empty State
+========================= */
+
+.no-resumes {
+  text-align: center;
+  margin-top: 60px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .my-resumes {
+    padding: 20px;
+  }
+
+  .resume-card {
+    padding: 16px;
+  }
+
+  .resume-actions button {
+    width: 100%;
+  }
+}
