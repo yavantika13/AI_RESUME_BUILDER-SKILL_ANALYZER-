@@ -149,6 +149,14 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
+            {/* ✅ NEW: Forgot Password */}
+          <p
+            className="forgot-password"
+            onClick={() => navigate("/forgot-password")}
+          >
+            Forgot Password?
+          </p>
+
           <button type="submit" disabled={loading}>
             {loading ? "Logging in..." : "Login"}
           </button>

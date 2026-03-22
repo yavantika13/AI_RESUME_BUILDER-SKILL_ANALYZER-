@@ -117,6 +117,7 @@ import SkillAnalyzer from "./SkillAnalyzer.jsx";
 import MyResumes from "./MyResumes.jsx";
 import ResumeHistory from "./ResumeHistory.jsx";
 import Profile from "./Profile.jsx";
+import ForgotPassword from "./forget-password.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -131,6 +132,7 @@ function App() {
         {/* Auth */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
 
         {/* Dashboard */}
