@@ -291,6 +291,36 @@ const roleSkillsMap = {
   "Backend Developer": ["node", "express", "mongodb", "sql"],
   "AI Engineer": ["python", "machine learning", "deep learning", "nlp"],
   "Software Engineer": ["data structures", "algorithms", "oops", "git"],
+
+  "Data Analyst": [
+    "excel",
+    "sql",
+    "python",
+    "power bi",
+    "tableau",
+    "statistics",
+    "data visualization"
+  ],
+
+  "Data Engineer": [
+    "python",
+    "sql",
+    "etl",
+    "data warehousing",
+    "apache spark",
+    "hadoop",
+    "aws"
+  ],
+
+  "Data Scientist": [
+    "python",
+    "statistics",
+    "machine learning",
+    "deep learning",
+    "data visualization",
+    "pandas",
+    "numpy"
+  ]
 };
 
 const roadmap = {
@@ -310,6 +340,20 @@ const roadmap = {
   algorithms: "Sorting → Searching → Optimization",
   "data structures": "Arrays → Linked List → Trees → Graphs",
   oops: "Classes → Inheritance → Polymorphism",
+
+  // New Skills for Data Roles
+  excel: "Excel basics → Formulas → Pivot Tables → Dashboards",
+  "power bi": "Data modeling → DAX → Interactive dashboards",
+  tableau: "Data visualization → Dashboards → Storytelling",
+  statistics: "Descriptive statistics → Probability → Hypothesis testing",
+  "data visualization": "Charts → Graphs → Storytelling with data",
+  pandas: "Data manipulation → Cleaning → Analysis",
+  numpy: "Arrays → Mathematical operations → Linear algebra",
+  etl: "Extract → Transform → Load → Data Pipelines",
+  "data warehousing": "Star schema → Snowflake schema → OLAP",
+  "apache spark": "RDDs → DataFrames → Distributed processing",
+  hadoop: "HDFS → MapReduce → Hadoop Ecosystem",
+  aws: "S3 → Redshift → Glue → EMR"
 };
 
 /* ================= COMPONENT ================= */
@@ -350,21 +394,84 @@ function SkillAnalyzer() {
     setMatchPercent(percent);
 
     /* ===== AI IMPROVEMENT SUGGESTIONS ===== */
-    const tips = [];
-    if (percent < 50) {
-      tips.push("Focus on fundamentals before advanced topics");
-    }
-    if (missing.includes("react")) {
-      tips.push("Build 2–3 React projects to improve UI skills");
-    }
-    if (missing.includes("git")) {
-      tips.push("Use GitHub daily to improve version control");
-    }
-    if (missing.includes("machine learning")) {
-      tips.push("Start with small ML datasets and projects");
-    }
+const tips = [];
 
-    setAiTips(tips);
+if (percent < 50) {
+  tips.push("Focus on fundamentals before advanced topics");
+}
+
+if (missing.includes("react")) {
+  tips.push("Build 2-3 React projects to improve UI skills");
+}
+
+if (missing.includes("git")) {
+  tips.push("Use GitHub daily to improve version control");
+}
+
+if (missing.includes("machine learning")) {
+  tips.push("Start with small ML datasets and projects");
+}
+
+/* ===== Data Analyst Suggestions ===== */
+if (missing.includes("excel")) {
+  tips.push("Learn Excel formulas, Pivot Tables, and dashboards");
+}
+
+if (missing.includes("sql")) {
+  tips.push("Practice SQL queries, joins, and aggregations");
+}
+
+if (missing.includes("power bi") || missing.includes("tableau")) {
+  tips.push("Create interactive dashboards using Power BI or Tableau");
+}
+
+if (missing.includes("statistics")) {
+  tips.push("Strengthen your statistics and probability concepts");
+}
+
+if (missing.includes("data visualization")) {
+  tips.push("Practice storytelling using charts and graphs");
+}
+
+/* ===== Data Engineer Suggestions ===== */
+if (missing.includes("etl")) {
+  tips.push("Build ETL pipelines using Python and SQL");
+}
+
+if (missing.includes("data warehousing")) {
+  tips.push("Learn data warehousing concepts like Star and Snowflake schemas");
+}
+
+if (missing.includes("apache spark")) {
+  tips.push("Explore big data processing using Apache Spark");
+}
+
+if (missing.includes("hadoop")) {
+  tips.push("Understand the Hadoop ecosystem and HDFS");
+}
+
+if (missing.includes("aws")) {
+  tips.push("Learn cloud services such as AWS S3, Redshift, and Glue");
+}
+
+/* ===== Data Scientist Suggestions ===== */
+if (missing.includes("pandas") || missing.includes("numpy")) {
+  tips.push("Master data analysis using Pandas and NumPy");
+}
+
+if (missing.includes("deep learning")) {
+  tips.push("Build neural network models using TensorFlow or PyTorch");
+}
+
+if (missing.includes("nlp")) {
+  tips.push("Work on NLP projects like chatbots and sentiment analysis");
+}
+
+if (missing.includes("python")) {
+  tips.push("Strengthen Python programming for data science applications");
+}
+
+setAiTips(tips);
 
     /* ===== AUTO CONNECT WITH RESUME BUILDER ===== */
     localStorage.setItem("resumeSkills", skills);
@@ -390,6 +497,9 @@ function SkillAnalyzer() {
           <option value="Backend Developer">Backend Developer</option>
           <option value="AI Engineer">AI Engineer</option>
           <option value="Software Engineer">Software Engineer</option>
+          <option value="Data Analyst">Data Analyst</option>
+            <option value="Data Engineer">Data Engineer</option>
+             <option value="Data Scientist">Data Scientist</option>
         </select>
 
         <button onClick={analyzeSkills}>Analyze Skills</button>
